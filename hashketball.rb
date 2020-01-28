@@ -111,7 +111,6 @@ def num_points_scored(player_name) #player_name = individual players name
   num_points = 0 
   game_hash.each do |team, stats| #team = :home and :away, stats = all the stats
     stats[:players].each do |player| #player = each players individiual stats
-      #binding.pry
       if player[:player_name] == player_name # if the player name matches the name entered as the argument
        num_points = player[:points] # points scored by each player
       end
@@ -125,7 +124,6 @@ def shoe_size(player_name)
   size = nil
   game_hash.each do |team, stats| #team = :home and :away, stats = all the stats
     stats[:players].each do |player|
-      #binding.pry
       if player[:player_name] == player_name
        size = player[:shoe] #each players shoe size
      end
